@@ -1,0 +1,155 @@
+===============================
+Spring Boot with Angular Integration
+===============================
+
+-> Spring Boot is used to develop Backend REST APIs for the application
+
+-> Angular is used to develop frontend of the application
+
+-> Frontend application contains user interface
+-> Backend apis contains business logic
+
+Note: Frontend application should access backed apis
+
+			Fullstack Development = Fronend Development + Backnd Development
+
+
+==============
+HttpClient
+==============
+
+-> In Angular, we have HttpClient module to communicate with Backend apis
+
+-> HttpClient module is used to send request from one server to another server
+
+
+			Angular   ----> HttpClient Module -----------> Backend Apis
+
+
+-> HttpClientModule is available in '@angular/common/http' package
+
+-> We have to import this HttpClientModule in "AppModule"
+
+
+=================================
+Steps To Develop Fullstack Application
+=================================
+
+================================================================
+1) Create Spring Boot Application using STS IDE with below dependencies
+================================================================
+
+			a) Spring-Boot-Web-Starter
+			b) Dev Tools
+
+================================================================
+2) Create RestController with Required Methods like below
+================================================================
+
+@RestController
+@CrossOrigin
+public class MyRestController {
+
+	@GetMapping("/welcome")
+	public String getWelcomeMsg() {
+		String msg = "Welcome to Fullstack Development...";
+		return msg;
+	}
+
+	@GetMapping("/wish")
+	public String getWishMsg() {
+		String msg = "All The Best My Dear Friend...";
+		return msg;
+	}
+}
+
+3) Run the Spring Boot Application (By default it will run in embedded tomcat server)
+
+=================================================
+4) Create Angular Application using VS Code IDE
+=================================================
+			$ ng new app
+
+=================================================
+5) Import HttpClientModule in App Module ts file
+=================================================
+
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { HttpClientModule } from '@angular/common/http';
+
+import { AppComponent } from './app.component';
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule, HttpClientModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+
+
+		
+============================================================
+6) Create functions in App Component class to handle template request
+============================================================
+
+import { createInjectableType } from '@angular/compiler';
+import { Component, Inject } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'app9';
+
+    msg:string = "Welcome to Angular";
+
+    constructor(@Inject (HttpClient) private httpClient:HttpClient){ }
+
+    getWelcomeMessage(){
+       this.httpClient.get("http://localhost:8080/welcome", {responseType : 'text'})
+       .subscribe(response => {
+          this.msg = response;
+       });
+    }
+
+    getWishMessage(){
+        this.httpClient.get("http://localhost:8080/wish", {responseType: 'text'})
+        .subscribe(response => {
+          this.msg = response;
+        });
+    }
+} 
+
+
+=================================================
+7) Design Presentation logic in template file
+=================================================
+<div>
+    <h3>Spring Boot + Angular Integration</h3>
+
+    <input type="button" value="Get Welcome Msg" (click)="getWelcomeMessage()"/>
+    <input type="button" value="Get Wish Msg" (click)="getWishMessage()"/>
+
+    <hr/>
+
+    {{msg}}
+
+</div>
+
+8) Run the Angular Application to test Integration logic
+
+
+
+
+
+

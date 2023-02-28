@@ -1,0 +1,255 @@
+==================================
+JAVA REAL-TIME PROJECT - TRAINING
+==================================
+
+Name : Ashok (9+ Yrs Exp, Working in Product Based Company from Hyd)
+
+Skill Set : Java, J2EE, Spring Boot, Microservices, Angular, Linux, DevOps & AWS Cloud
+
+I am having 6+ Yrs of Training Experience
+
+Batch Code : 22-JRTP
+
+==============
+Pre-Requisites
+==============
+
+1) Core Java 
+
+2) Advanced Java ( JDBC & Servlets )
+
+3) SQL
+
+Note: If you have completed Core Java, Adv Java & SQL then only join for JRTP
+
+4) Spring Core (IOC, DI, Scope, Autowiring, Bean Lifecycle)
+
+5) Spring Boot & Microservices (SBMS)
+
+
+Note: You can do SBMS & JRTP paralelly
+
+Note: My SBMS new batch will start in 20 - 25 days of time (8:00 PM (IST) )
+
+
+==============
+Course Content
+==============
+
+
+Module-1 : Software Industry Information
+				 - Types of S/w companies
+				 - Types Of S/w Projects
+				 - Types of S/w Jobs
+				 - Interview Process
+				 - Cover the Gap as Experience
+
+Module-2 : Realtime Tools (20+ Tools)
+
+				 - Maven
+				 - Gradle
+				 - Nexus
+				 - Project Lombok
+				 - GIT Hub
+				 - Log4J
+				 - Putty/ WinscP
+				 - ELK
+				 - JUnit
+				 - Mocking
+				 - Jacocco
+				 - SonarQube
+				 - JMeter
+				 - PostMan
+				 - Swagger
+				 - JIRA
+				 - Jenkins
+				 - Docker
+				 - Kubernetes
+				 - Kafka
+				 - Redis
+				
+
+Module-3 : Mini Projects Development (4 Mini Projects)
+
+				 - Requirements Analsysis
+				 - DB design
+				 - Components Design
+				 - Development
+				 - Testing
+				 - Code Review
+				 - Deployment
+
+Note: The main aim of Module-3 is to make you independent programmer & to improve your coding skills
+
+
+Note: For Mini Projects we will use Spring Boot & Microservices
+
+
+Module-4 : Microservices
+
+				 - Service Registry (EurekaServer)
+				 - ApiGateway
+				 - Circuit Breaker
+				 - AdminServer & AdminClinet
+				 - Distributed Logging (Sleuth & Zipkin)
+				 - FeignClient
+
+Module-5 : Major Project ( Insurance / Banking )					
+			
+	Note: For Major Project we will use Spring Boot & Microservices
+				
+Note: Our major project you can keep in Resume to attend interviews
+
+Module-6 :  Frontend Development using Angular Framework
+
+				 - Backend with Frontend Integration
+
+Module- 7 : AWS Cloud
+
+			 - What is Cloud
+			 - AWS Account Creation
+			 - VM launching in AWS
+			 - Cloud Deployment
+
+Module-8  : Interview Guide
+
+				  - Interview Questions
+				  - Resume Preparation
+				  - Roles & Responsibilities
+				  - Daily Activities
+				  - Joining Formalities
+				  - First day & Last day
+				  - Email Writing Skills
+				  - Conclusion
+
+
+**************** Download Course Content : https://ashokitech.com/java-realtime-project-online-training ********************
+
+
+===============
+Course Details
+================
+
+Course Code  : 22-JRTP  (Java Realtime Project)
+
+Mode : Online (daily live classes)
+
+Start Date : 27-Oct-2022 (Today)
+
+Class Timings: 8:30 AM - 9:45 AM (IST)   (Mon - Sat)
+
+Duration : 3.5 Months (10 days +/-)
+
+Plan-1 : 7,000 INR ( Only Live Sessions + Daily Class Notes )
+
+Plan-2 : 12,000 INR (Live Sessions + Backup videos - 6 months + Daily Class Notes)
+
+
+Note: You can attend 3 regular sessions for Free, then you can take the enrollment
+
+
+Note: From tomorrow our Module-1 will start
+
+
+
+
+
+
+
+
+
+===============================
+Module-1 : Software Industry Details
+================================
+
+Types of Software Companies
+
+				- Product Based Companies
+	
+				- Service Based Companies
+	
+				- Outsourcing Companies
+
+
+-> Product Based Companies will develop the projects/products and will sell to customers in the market
+
+			Ex: Microsoft, Google, Amazon, Oracle, Samsung, Dell, HP etc.....
+
+-> Service Based Companies will develop the projects based on client requirement
+
+			Ex: TCS, Infosys, Wipro, TechM, Deloitte, Cognizent, Capgemeni, HCL etc............
+
+-> Outsourcing Companies will send resources to other companies based on demand
+
+			Ex: SourceOneMgmt, ResourcePool, A2HR etc.....
+
+Note: Most of the service based companies are doing outsourcing business
+
+
+				HCL --------------------> Microsoft
+
+				CTS ------------------> JPMC
+
+				TCS  --------> Oracle
+
+
+				Payroll Company : The company which gives salary for us  ( Ex: HCL)
+
+				Client Company : The company for which we will work  (Ex: Microsoft)
+
+
+=============================
+Interview Process in IT Companies
+==============================
+
+Product Based Companies will conduct interviews on below topics
+
+				 -  Data Structures
+				 - Algorithms
+				 - Design Patterns
+				 - System Design
+				 - Problem Solving
+				 - Coding Tests
+
+
+Product Based Company Salary Structure : Years.of.exp * 5 to 6 lakhs
+
+
+Service Based Companies will conduct interviews on below topics
+
+				 - Java  Concepts
+				 - Java 8
+				 - Spring Boot
+				 - Microservices
+				 - Frontend
+				 - Tools
+				 - Project Scenarios
+
+Service Based Company Salary Structure : Years.of.exp * 3 to 4 lakhs
+
+				
+
+==================
+Types Of Projects
+=================
+
+1) Scratch Development Projects
+
+2) Maintenence / Support Projects
+
+3) Migration Projects
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

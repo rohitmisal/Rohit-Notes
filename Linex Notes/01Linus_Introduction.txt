@@ -1,0 +1,108 @@
+#######################
+What is Operating System 
+#######################
+
+-> OS acts as mediator between users and computer hardware components
+
+-> OS provides user interface to work with computer
+
+-> OS is mandatory to use any computer
+
+Ex: Windows, Linux, MAC, Android & IOS etc....
+
+
+-> Windows is single user based OS
+-> Windows is paid software
+-> Windows developed by Microsoft
+-> Security features are less in windows OS
+-> Recommended for personal use
+
+
+-> Linux is free & Open source OS
+-> Linux is multi user based OS
+-> Security is high in Linux
+-> It is recommended for Severs, Databases, Applications execution
+-> Linux is community based OS
+
+-> Linux OS developed by 'Linux Torvalds'
+
+###########################
+Linux Distributions / Flavors
+###########################
+
+RED Hat Linux
+Amazon Linux
+Ubuntu
+Cent OS
+SUSE
+Kali Linux
+Debian Linux
+Fedora etc...
+
+
+Note: 200+ Linux Distributions are available
+
+
+#########################
+Linux Environment Setup
+########################
+
+1) We can install using Virtual Box (Hypervisior / VM Ware)
+
+2) We can use Cloud Provided Virtual Machine ( AWS EC2 Instance )
+
+
+Note: AWS EC2 instances are free for 1 year (Monthly 750 hours)
+
+
+-> Create EC2 Linux VM and connect to it using MobaXterm
+
+#####################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

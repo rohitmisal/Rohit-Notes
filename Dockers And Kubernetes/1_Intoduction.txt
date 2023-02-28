@@ -1,0 +1,71 @@
+===================
+Docker & Kubernetes
+===================
+
+Pre-Requisites : Basic Linux Commands + AWS Cloud Account
+
+Duration: 20 to 25 hours
+
+Class Timings: 7:00 AM - 8:15 AM (IST)  ---> Mon - Sat
+
+Course Content :
+
+Part-1 : Docker
+
+Part-2 : Kubernetes
+
+Download Course Content : https://ashokitech.com/docker-kubernetes-online-training
+
+Course Fee : 5000 INR ( Live classes + Class Notes + Backup Videos - 6 months ) 
+
+Note: After completion of this course, you can keep 3+ years experience in Docker & Kubernetes
+
+
+========
+Docker
+========
+
+Application Tech Stack :  It represents technologies used in the application
+
+
+1) Frontend Stack : HTML, CSS, JS, BS & Angular / React JS
+
+2) Backend Stack : Java / .Net / Python / Node JS 
+
+3) Database : Oracle / MySQL / PostgresSQL / Mongo DB
+
+
+
+-> Docker is a containizeration platform
+
+-> Docker is used to simplify application deployment process in Multiple Environments
+		(DEV, SIT, UAT, PILOT and PROD)
+
+-> Docker is used to package application code + application dependencies for easy execution
+
+-> Using Docker we will create Docker images
+
+-> Docker Image contains App code + App dependencies
+
+-> We can run docker image in any machine. It will take care of dependencies & execution
+
+-> When we run Docker image, it will create Docker container
+
+-> Docker Container will run our application
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

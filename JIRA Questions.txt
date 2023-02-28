@@ -1,0 +1,69 @@
+1) Who will give story points in story ?
+
+Ans) The person who creates a story same person will give story points
+
+2) What is the difference between Team Lead & Tech Lead...
+
+Ans) 
+
+	Team Lead is responsible to assign works for the team members and collect work status...
+
+         Tech Lead is respoinsible to provide solutions for the team members technically
+
+		Waterfall Model --------> Team Lead
+
+		Agile Model ----------> Tech Lead
+
+3) What is the duration of Sprint ?
+
+Ans) It depends upon project management team
+
+	Note: Mostly projects will have 2 weeks sprint (10 working days)
+
+4) When testing will happen in sprint ?
+
+Ans) In Agile methodology Development and Testing is a parallel process
+
+Note: In every sprint, dev team stories and testing team stories also will be available. Both teams will work paralelly
+
+5) Who will assign daily tasks to you?
+
+Ans) Self assignment process is there in our project. We need to check pending stories in sprint and we need to assign to ourself and we need to start working on it.
+
+6) If you are unable to complete a story as per estimations then what you will do?
+
+Ans) I will explain to my scrum master why i am unable to complete the story with in given time and i will explain what are the challenges i am facing to complete it. I will justify the reason for not completing.
+
+7) What is Tech Debt in Agile methodology?
+
+Ans) If we are facing techical challenges to complete a story which requires more analysis to complete is called as Tech Debt.
+
+8) If there are no pending stories in Sprint then what you will do?
+
+Ans) I will inform to scrum master regarding this and i will follow my scrum master instructions. In free time i will explore on new technologies / apis / frameworks which will help to improve our productivity in the project.
+
+
+
+
+Maven
+Git Hub
+Bit Bucket
+Nexus Repo
+Jenkins CI CD
+Logging
+Log Monitoring
+Project Lombok
+Debuggnig
+Agile Methodology
+JIRA
+Docker  -----> Running
+Angular ----> Running
+
+
+
+
+
+
+
+
+

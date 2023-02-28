@@ -1,0 +1,200 @@
+=================
+Delete Functionality
+=================
+
+-> In realtime we will implement delete functionality in 2 ways
+
+1) Soft Delete
+
+2) Hard Delete
+
+
+-> Hard Delete means deleting the record permanenlty from database by using delete query.
+-> When we perform hard delete, we can't get data back 
+
+-> Soft delete means instead of deleting record permanently we will update record as In-Active record
+-> Soft delete means record should be removed from application but not from database
+-> With Soft delete operation we can get our data back whenever it is required.
+
+
+===================Entity================
+@Data
+@Entity
+@Table(name = "CONTACT_DTLS")
+public class Contact {
+
+	@Id
+	@GeneratedValue
+	private Integer contactId;
+	private String contactName;
+	private String contactEmail;
+	private Long contactNum;
+	private String activeSw;
+
+}
+
+=====================Repository===================
+
+package in.ashokit.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import in.ashokit.binding.Contact;
+
+public interface ContactRepository extends JpaRepository<Contact, Integer>{
+	
+	// select * from CONTACT_DTLS where active_sw=:status
+	public List<Contact> findByActiveSw(String status);
+
+}
+===================Service Method===================
+
+package in.ashokit.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import in.ashokit.binding.Contact;
+import in.ashokit.repository.ContactRepository;
+
+@Service
+public class ContactServiceImpl implements ContactService {
+
+	@Autowired
+	private ContactRepository repo;
+
+	@Override
+	public String saveContact(Contact contact) {
+		
+		contact.setActiveSw("Y");
+		
+		contact = repo.save(contact); // insertion
+
+		if (contact.getContactId() != null) {
+			return "Contact Saved";
+		} else {
+			return "Contact Failed To Save";
+		}
+	}
+
+	@Override
+	public List<Contact> getAllContacts() {
+		// return repo.findAll();
+		return repo.findByActiveSw("Y");
+	}
+
+	@Override
+	public Contact getContactById(Integer contactId) {
+
+		Optional<Contact> findById = repo.findById(contactId);
+
+		if (findById.isPresent()) {
+			return findById.get();
+		}
+
+		return null;
+	}
+
+	@Override
+	public String updateContact(Contact contact) {
+		if (repo.existsById(contact.getContactId())) {
+			repo.save(contact); // update operation
+			return "Update Success";
+		} else {
+			return "No Record Found";
+		}
+	}
+
+	@Override
+	public String deleteContactById(Integer contactId) {
+		/*if (repo.existsById(contactId)) {
+			repo.deleteById(contactId);
+			return "Record Deleted";
+		} else {
+			return "No Record Found";
+		}*/
+		
+		Optional<Contact> findById = repo.findById(contactId);
+		if(findById.isPresent()) {
+			Contact contact = findById.get();
+			contact.setActiveSw("N");
+			repo.save(contact);
+			return "Record Deleted";
+		}else {
+			return "No Record Found";
+		}
+	}
+}
+======================== REST Controller===============
+package in.ashokit.rest;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import in.ashokit.binding.Contact;
+import in.ashokit.service.ContactService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+
+@RestController
+@CrossOrigin
+@Api(value = "This Contact API")
+public class ContactRestController {
+
+	@Autowired
+	private ContactService service;
+
+	@ApiOperation("This operation is used to store new contact")
+	@PostMapping("/contact")
+	public String createContact(@RequestBody Contact contact) {
+		String status = service.saveContact(contact);
+		return status;
+	}
+
+	@ApiOperation("This operation is used to get all contacts")
+	@GetMapping("/contacts")
+	public List<Contact> getAllContacts() {
+		return service.getAllContacts();
+	}
+
+	@ApiOperation("This operation is used to get contact using id")
+	@GetMapping("/contact/{contactId}")
+	public Contact getContactById(@PathVariable Integer contactId) {
+		return service.getContactById(contactId);
+	}
+
+	@ApiOperation("This operation is used to update existing contact")
+	@PutMapping("/contact")
+	public String updateContact(@RequestBody Contact contact) {
+		return service.updateContact(contact);
+	}
+
+	@ApiOperation("This operation is used to delete contact using id")
+	@DeleteMapping("/contact/{contactId}")
+	public String deleteContact(@PathVariable Integer contactId) {
+		return service.deleteContactById(contactId);
+	}
+}
+================application.properties======================
+spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.username=sa
+spring.datasource.password=sa
+spring.datasource.driver-class-name=org.h2.Driver
+
+spring.mvc.pathmatch.matching-strategy = ANT_PATH_MATCHER
+
+==========================================================

@@ -1,0 +1,92 @@
+========
+CO API
+=======
+
+=> CO API is responsible to generate and send notices to citizens based on their eligibility data
+
+=> CO api will read pending triggers from CO_TRIGGERS table and then it will generate notice with citizen eligiblity data
+     and it will send notice to citizen email.
+
+=> After sending notice to citizen  CO api will update trigger as completed.
+
+================
+CO Business Logic
+================
+
+1) Read all pending triggers from CO_TRIGGERS table
+
+2) Process Each Pending Trigger
+
+			2.1 ) Get Eligibility data based on caseNum
+			2.1 ) Get Citizen data based on AppId
+			2.3 ) Prepare PDF with Citizen Data + Eligibility data
+			2.4 ) Store PDF into DB Table  (later we will discuss how to store into AWS S3 bucket)
+			2.5 ) Send PDF to citizen email
+			2.6 ) Update the trigger as completed.
+
+3)  Send the final response ( Total Records Processed, Success Count, Failure Count ) from API
+
+
+
+
+
+========================= Skelton ==============
+
+public CoResponse generateNotices ( ) {
+
+	CoResponse response = new CoResponse( ) ;
+
+	long successCnt = 0;
+	long failureCnt = 0;
+
+	List<CoTrigger> list = coTrgRepo.findByTrgStatus("Pending");
+
+	for(CoTrigger trg : list){
+		try {
+			processTrigger(trg);
+			successCnt ++ ;
+		}catch(Exception e){
+			failureCnt ++ ;
+		}		
+	}
+
+	response.setTotalTriggers(Long.valueOf(pendingTrgs.size()));
+	response.setSuccTriggers(successCnt);
+	response.setFailedTrigger(failureCnt);
+
+	return response;
+}
+
+public void processTrigger(CoTrigger trg){
+
+		Long caseNum = trg.getCaseNum ( ) ;
+
+		// get eligiblity data based on casenum (ed_elig_dtls)
+
+		// get citizen applied plan info using casenum (dc_cases)
+
+		// get plan name based on plan_id (plan_master)
+
+		// get citizen data based on app_id  (citzen_apps)
+
+		byte[ ]  file = null;
+
+		if(status.equals("Approved"){
+			file = buildApPdf();
+		}else{
+			file = buildDnPdf ( );
+		}
+
+		// send pdf in email as attachment.
+		// store pdf into s3 bucket
+		// update trigger info in co_triggers table (pdf + status as 'Completed')
+		
+}
+
+======================================================================
+
+
+
+
+
+	

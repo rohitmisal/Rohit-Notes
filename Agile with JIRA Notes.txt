@@ -1,0 +1,228 @@
+=====================================
+What is Software Development Life Cycle ?
+====================================
+
+-> The SDLC refers to a methodology
+
+-> SDLC clearly defines the process of creating high-quality software project
+
+-> SDLC methodology focuses on below phases of software development
+
+
+1) Requirements Analysis
+
+2) Planning
+
+3) Software Design or Architectural Design
+
+4) Development
+
+5) Testing
+
+6) Deployment
+
+7) Support
+
+
+-> We have several methodologies in SDLC
+
+1) Waterfall Model
+
+2) V-Model
+
+3) Spiral Model
+
+4) Agile Model
+
+
+==============
+Waterfall Model
+==============
+
+-> Waterfall Model introduced in 1970
+
+-> The waterfall Model was the first model that introduced as Process Model.
+
+-> It is a linear or sequential approach to develop software projects
+
+-> It is also called as step By step approach to develop the projects
+
+-> In this model we will complete one phase then we will move on to next phase
+
+Note: Going back to previous phase is not allowed in waterfall model.
+
+==================
+When to use Waterfall
+==================
+
+-> When requirements are fixed
+
+-> When Project is small
+
+-> When Project budget is fixed
+
+
+=======================
+Dis-Advantages of Waterfall
+=======================
+
+-> Risk is high
+
+-> Requirements can't be changed in middle
+
+-> We can't go to previous phase
+
+-> Testing will happen at the end
+
+-> Client involvement is very very less
+
+
+#################
+Agile Methodology
+################
+
+-> Agile is one of the SDLC methodology
+
+-> It is a way to manage the project by breaking into several phases
+
+-> Agile is also called as an iterative approach to develop and deliver the project
+
+-> We can achieve continuous development and continuous delivery using Agile Model
+
+-> It involves constant colloboration with stake holders (clients)
+
+-> Continuous improvement at every stage
+
+-> Client Feedback is most critical part in Agile Methodology
+
+-> In Agile, Planning, Implementing, Testing and Delivering is a cyclic process
+
+
+================
+Agile Terminology
+================
+
+Backlog Grooming  : A Team meeting to identify pending works in the project.
+
+Stories  : Tasks (work)
+
+Backlog Stories: Pending Stories in the project.
+
+Note: In backlog grooming meeting, team members will create backlog stories
+
+Story Points : Duration to complete the story (3 points - 1 day, 5 points - 2 days, 8 Points - 3 days)
+
+Sprint Planning : A Team meeting to identify priority stories to work in the Sprint.
+
+Sprint  : Set of stories to complete (Sprint Goal) & Sprint Duration - 2 weeks (10 working days)
+
+Scrum : It is a process   (Daily team meeting to discuss work status for 15 - 20 minutes) 
+
+Retrospective : Review meeting after few sprint(s) completed 
+
+				(What went well, What went wrong, achievements, improvements, lessons learnt, new ideas)
+
+Note: We have monthly one retrospective meeting.
+-----------------------------------------------------------------------------------------------
+
+Product Owner : Responsible for Deliverables
+
+Scrum Master  : Who will manage Agile teams
+
+Tech Lead  : Seniour Team Members (Who will help team members technically)
+
+Team Members : Developers & Testers
+
+
+Agile Team Size : 7 - 10 members (Industry Standards)
+
+
+=======
+JIRA
+=======
+
+-> Jira is called as project management software
+
+-> In companies, project work will be managed by using JIRA s/w
+
+-> JIRA software is also used for Bug Reporting
+
+-> JIRA software developed by Atlasian company (BitBucket also from same company)
+
+-> JIRA is a commercial software (we need to purchase license to use for commerical purpose)
+
+Note: We can use JIRA trail version for practise. In IT companies we will use paid version of JIRA.
+
+
+==============
+JIRA Assignment
+===============
+
+1) Login into JIRA
+2) Create Project in JIRA
+3) Create Backlog Stories in JIRA
+4) Drag the backlog stories to Sprint
+5) Start the Sprint
+6) Assign the story to your name and change story status to In-Progress
+7) Add story comments and change status to Done
+
+
+
+Note: In few projects, scrum master will assign stories to team members to work. 
+
+-> In few projects no body will assign the story to us, we have to assign story to ourself and we have complete it.
+
+-> After story is completed we have to change story status to DONE.
+
+Note: Every day we have to give our story status to scrum master in scrum call.
+
+-> If we are not able to complete any story with in given time then we need to explain the reason in the scrum call.
+
+Note: If we don't have any stories to work then we need to discuss with Scrum Master regarding work.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

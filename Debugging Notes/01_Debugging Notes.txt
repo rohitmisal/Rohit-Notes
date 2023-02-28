@@ -1,0 +1,65 @@
+==========
+Debugging
+==========
+
+-> Debugging is the proecss of executing the code line by line
+
+-> Using Debugging we can understand program execution flow in our system
+
+-> Using Debugging we can identify exceptions occuring in the program
+
+-> Debugging will help us in understanding root cause of the problem
+
+-> Debugging is a mandatory skill for every developer.
+
+-> Without having debugging knowledge we can't work in realtime project
+
+-> We can perform code debugging using IDEs ( Eclipse / STS / Intelli J )
+
+Note: If you write the program in text editors (notepad, notepad++) we can't do debugging.
+
+===========================
+How to perform Debugging
+==========================
+
+Step-1 : Keep Breakpoints in the code ( The place from where we need to start debugging )
+
+Note: Just right click on line number to keep or remove breakpoint.
+
+Step-2 : Run the project in Debug Mode (Right Click on Project / Program, Choose Debug Option to Run)
+
+Step-3 : Use debug shortcuts to debug the program / project
+
+			F5  --> Go inside calling method
+
+			F6  --> Go to next line
+
+			F7  --> Come back to caller method
+
+			F8  --> Go to next break point
+
+
+Note: In few keyboards, Fn key press is required to use F5, F6, F7 and F8 keys
+
+=================================
+What is Drop To Frame in Debugging ?
+==================================
+
+-> It is used to re-start method execution in debug mode.
+
+
+
+-> When we are in debug mode we can change values of the variables for testing purpose
+
+
+
+Debugging Video : https://youtu.be/2WxsClYhreE
+
+Eclipse Shortcuts Video : https://youtu.be/TvYMey5SYa8
+
+
+
+
+
+
+

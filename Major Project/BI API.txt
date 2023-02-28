@@ -1,0 +1,26 @@
+=========================
+BI Module (Benefit Issuance)
+=========================
+
+=> BI is responsible to send benefit amount for Plan Approved Citizens
+
+=> Bi will read Approved Citizens data from ED table and it will prepare a CSV file with citizens data
+
+=> BI will insert that file into BI_INFO table and will upload that file into FTP location
+
+===============   CSV file Format  ==================
+
+[ caseno, fname, ssn, planname, benefit amt ]
+
+797979,john,797973479,SNAP,345.00$
+697979,smith,7979423979,CCAP,345.00$
+597979,cathy,79235979,Medicaid,345.00$
+497979,charles,7965679,Medicare,345.00$
+397979,buttler,7342479,RIW,345.00$
+297979,David,786579,SNAP,345.00$
+897979,James,7925579,SNAP,345.00$
+997979,Lin,735679,CCAP,345.00$
+123979,Rhodes,77559,RIW,345.00$
+432979,Orlen,7985559,SNAP,345.00$
+
+========================================================

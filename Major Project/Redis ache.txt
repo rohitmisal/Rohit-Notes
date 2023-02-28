@@ -1,0 +1,72 @@
+) What is Cache ?
+
+2) Why we need cache ?
+
+3) Where to use Cache in our project ?
+
+
+
+=> Cache is a temporary memory which is used to store data in key-value pair.
+
+=> Cache is used to reduce no.of DB calls from the application.
+
+=> We will use Cache Memory to store static data to use in application.
+
+=> Redis Cache we can use as global cache.
+
+=> Global Cache means multiple application can connect to that Cache to perform operations.
+
+
+Note: In CO module we have 180+ apis to generate notices. All the apis needs DHS office details to display in notice footer.
+
+
+=> To improve performance of our apis we can use Cache memory here.
+
+
+=======================
+Working with Redis Cache
+=======================
+
+1) Download and Install Redis cache s/w in our machine
+
+2) Store the data into Redis Cache in key-value format
+
+	Ex:  DHS_ADDRESS=H.No#streetname#city#phno#email#website
+
+3) Add Spring-boot-redis-starter dependency in the project
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+		</dependency>
+
+4) Configure JedisConnectionFactory bean with Redis Server details (URL, uname, pwd, port etc)
+
+5) Create RedisTemplate object and inject JedisConnectionFactory object into RedisTemplate
+
+@Configuration
+public class RedisConfig {
+
+	@Bean
+	public JedisConnectionFactory jendisConnectionFactory() {
+		JedisConnectionFactory jcf = new JedisConnectionFactory();
+		// set redis server properties
+		return jcf;
+	}
+
+	@Bean
+	public RedisTemplate<String, String> redisTemplate(){
+		RedisTemplate<String, String> redisTemplate = new RedisTemplate<>();
+		redisTemplate.setConnectionFactory(jendisConnectionFactory());
+		return redisTemplate;
+	}
+}
+
+6) Inject RedisTemplate into our service impl class and get HashOperations object from RedisTemplate to perform operations with Redis Server.
+
+
+			HashOperations<String, Object, Object> hashOps = redisTemplate.opsForHash();
+		
+			String addr = (String) hashOps.get("DHS", "DHS_OFC_ADDRESS");
+		
+			// process the address text and set to pdf as footer text

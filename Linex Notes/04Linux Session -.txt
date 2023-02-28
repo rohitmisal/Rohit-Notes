@@ -1,0 +1,225 @@
+#####################################
+Today's Topic : File Permissions In Linux
+####################################
+
+-> A file can have 3 types permissions
+
+	1) Read (r)
+
+	2) Write (w)
+
+	3) Execute (x)
+
+-> File permissions are divided into 3 secions
+
+Section-1 : User permissions   (first 3 characters represents user permissions)
+
+Section-2 : Group Permissions  (from 4th to 6th character represents group permissions)
+
+Section-3 : Others Permissions (From 7th to 9th character represents others permissions)
+
+
+
+->  rwxrwxrwx
+     
+	User --> having read, write & execute permissions
+
+	Group --> having read, write & execute permissions
+
+	Others --> having read, write & execute permissions
+
+
+->  rw-rw-r--
+
+	User -->    read & write
+ 
+      Group -->  read & write
+
+      Others -->  only read
+
+->   r--r--r-x
+
+	User -->    read 
+ 
+      Group -->  read 
+
+      Others -->  read & execute
+
+
+->   -r-xr-x--x
+
+	user --> read & execute
+	
+	Group  --> read & execute
+
+	Others --> Only execute
+
+
+->   d-w---x---
+
+	user  -->  only wite
+
+       group  -->  only execute
+
+       Others --> No permission
+	
+
+	
+########################
+Modifying File Permissions
+########################
+
+-> Using 'chmod' command we can change file permissions in Linux OS
+
+-> Using 'chmod' we can add and remove permissions
+
+
+Note:  '+' represents adding  '-'  represents removing
+
+
+# Add execute permission for the user
+$ chmod u+x ashokit.txt
+
+# Remove execute permission for the user
+$ chmod u-x ashokit.txt
+
+# Add execute permission for the group
+$ chmod g+x ashokit.txt
+
+# Add write permission for user
+$ chmod u+w ashokit.txt
+
+# Remove write permission for the group
+$ chmod g-w ashokit.txt
+
+# Remove write & execute pemissions for the group
+$ chmod g-wx ashokit.txt
+
+# Add write and execute permission for the user
+$ chmod u+wx ashokit.txt
+
+# Add execute permission for others
+$ chmod o+x ashokit.txt
+
+
+####################################
+File Permissions with Numeric Numbers
+######################################
+
+0  --> No permission
+
+1  --> Only Execute
+
+2  --> Only Write
+
+3  --> Execute & Write
+
+4  --> Only Read
+
+5  --> Read & Execute
+
+6  --> Read & Write
+
+7  --> Read, Write & Execute
+
+
+$ chmod 777 players.txt
+
+user -> rwx
+group -> rwx
+other -> rwx
+
+$ chmod 765 players.txt
+
+user --> rwx
+group -> rw
+others -> rx
+
+
+#################################
+Working with User Accounts in Linux
+################################
+
+-> Linux is a multi-user operating system
+
+-> With in one linux machine we can create multiple user accounts
+
+-> Multiple users can access one linux vm at a time and they can perform Multi-tasking
+
+
+Note: Every linux machine will have 'root' account ( super user --> sudo )
+
+
+-> When we launch a linux vm using 'Amazon Linux AMI' we will get 'ec2-user' account by default
+
+
+# Switch to root user
+
+$ sudo su
+
+Note: To perform admin activities we will use 'sudo' permission
+
+
+#################
+Create user in linux
+#################
+
+# create user
+$ sudo useradd  <username>
+
+# verify user account details
+$ id <username>
+
+# List all users in Linux
+$ cat /etc/passwd
+
+# delete user
+$ sudo userdel <username>
+
+# Display all groups 
+$ cat /etc/group
+
+# Create a group
+$ sudo groupadd <groupname>
+
+# Add user to a group
+$ sudo usermod -aG <group-name> <user-name>
+
+# Remove user from the group
+$ sudo gpasswd -d <username> <group-name>
+
+# Delete group
+$ sudo groupdel <group-name>
+
+# print users who are belongs to particular group
+$ sudo lid -g <group-name>
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+

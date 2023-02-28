@@ -1,0 +1,100 @@
+Q) What is Webserver?
+
+Ans) It is used to run web applications
+
+Ex: httpd
+
+############################################
+How to deploy one simple website in httpd server
+###########################################
+
+-> httpd is a webserver package
+
+$ sudo yum install httpd
+
+$ sudo service httpd start
+
+Note: httpd web server runs on 'HTTP Protocol with 80 port number'
+
+-> We can access this webserver using EC2 Instance public ip address
+
+Note: Enable HTTP Protocol in Security Group (Inbound Rule)
+
+$ cd /var/www/html
+
+$ vi index.html  (Write content here)
+
+
+# We can remove httpd server from our machine
+$ sudo yum remove httpd
+
+
+#################
+Package Manager
+#################
+
+-> It is a tool that allows the users to install, remove, upgrade softwares on an operating system
+
+Ex:   yum, apt, rpm, deb, chocklate etc........
+
+-> Linux Package Managers are used to install, remove, upgrade packages in linux os
+
+###################
+What is a package?
+###################
+
+-> Package means it is one application
+
+Ex:  httpd, git, maven, java, docker, jenkins etc......
+
+
+#####################################
+Which package manager we need to use ?
+#####################################
+
+RPM Based Linux Distributions : Amazon Linux, Red Hat Linux, Cent OS etc...
+
+	Package Managers : yum, rpm, dnf
+
+DEB based Linux Distributions : Ubuntu Linux, Debian Linux etc....
+	
+	Package Manager : apt
+
+
+#######################
+Top 5 Package Managers
+#######################
+
+1) YUM : Yellowdog Updater, Modified
+2) APT : Advanced Packaging Tool
+3) RPM : Red Hat Package Manager
+4) DPKG : Debian Package Management System
+5) DNF : Dandified YUM
+
+
+Q) How to install webserver in Red Hat Linux?
+
+$ sudo yum install httpd
+
+Q) How to install webserver in Ubuntu ?
+
+$ sudo apt install apache2
+
+############################
+How to install java 1.8 version
+###############################
+
+$ sudo yum install java-1.8.0-openjdk
+
+
+
+
+
+
+
+
+
+
+
+
+

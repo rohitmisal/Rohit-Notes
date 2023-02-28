@@ -1,0 +1,131 @@
+##########################################
+Previous Session : Linux Basic Commands
+##########################################
+
+cat : It is used to print file data from top to bottom
+
+tac : It is reverse of cat (Prints file data from bottom to top)
+
+head : It is used to print file data from top to bottom  (by default it prints first 10 lines only)
+
+		$ head sbi.log  (it reads first 10 lines)
+
+		$ head -n 25 sbi.log  (it reads first 25 lines)
+
+		$ head -n 50 sbi.log (it reads first 50 lines )
+
+tail : It is used to print file data from bottom to top (by default it prints last 10 lines)
+
+		$ tail sbi.log  (it reads last 10 lines data)
+		
+		$ tail -n 25 sbi.log (it reads last 25 lines data)
+
+		$ tail +25 sbi.log (It reads from 25th line to bottom)
+
+
+
+Note: Application log messages will be appended at bottom of the file. To read latest log messages we need to use 'tail' command.
+
+
+wc : It is used to print no.of lines, no.of words and no.of characters in given file
+
+	$ wc ashokit.txt
+
+##########
+GREP 
+#########
+
+-> Grep stands for 'Global Regular Expression Print'
+
+-> It is used to find the data in the file  (CTRL + F)
+
+-> Grep cmd will process the text line by line it prints the lines which are matched with given pattern
+
+	
+		$ grep 'Linux' ashokit.txt   (It will print all lines which contains Linux keyword)
+
+		$ grep -i 'Linux' ashokit.txt (Ignore case sensitive)
+
+		$ grep -i 'NullPointerException' sbi.log
+
+		$ grep -i 'Linux' *  (It will search for Exception keyword in all the files and prints which contains that )
+
+		$ grep -R 'Linux'  (It will search in present directory and sub-directories also)
+
+
+############
+Vi Text Editor
+############
+
+-> In Windows OS Notepad is the default text editor (It in default in Windows)
+
+-> In Linux OS we will use 'VI' text editor (It is default in Linux)
+
+$ vi ashokit.txt
+
+-> press 'i' in keyboard to enter into 'insert mode'
+
+-> write the data in the file
+
+-> Press 'Esc' then press :wq to save and close that file
+
+
+Note: To close the file without saving we will use  ==>  :q!
+
+
+
+#############
+SED Command
+#############
+
+-> SED stands for stream editor
+
+-> Using SED command we can replace the text without opening the file
+
+# It will replace Linux word with Unix and prints output to terminal
+$  sed 's/Linux/Unix'  linux.txt
+
+# It will repace Linux word with Unix word in the file
+$ sed -i 's/Linux/Unix' linux.txt
+
+-> Using sed command we can delete lines also in the file
+
+# it will delete 3rd line in the linux.txt file
+
+$ sed -i '3d' linux.txt
+
+# Delete last line of the file
+
+$ sed  -i '$d' linux.txt
+
+# Delete from nth line
+
+$ sed -i '12,$d' linux.txt
+
+
+###########################
+cat
+tac
+wc
+head
+tail
+grep
+vi
+sed
+########################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

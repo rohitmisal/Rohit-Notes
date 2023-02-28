@@ -1,0 +1,88 @@
+##############
+Session-02
+##############
+
+-> Linux VM we will operate with Commands (CLI)
+
+-> In Linux everthing will be represented as a file
+
+1) Normal Files (text files)
+
+2) Directories (Folder)
+
+################
+Linux Commands
+################
+
+# To make directory
+mkdir <dir-name>
+
+# To delete empty directory
+rmdir  <dir-name>
+
+# To list all files & directories in present working directory
+ls -l
+
+# To print present working directory
+pwd
+
+# To move inside the directory
+cd <dir-name>
+
+# To come out from the directory
+cd ..
+
+
+# To create empty files
+
+touch <filename>
+
+# To create multiple empty files 
+
+touch f1.txt f2.txt f3.txt
+
+# Create file with data (old data will be removed)
+
+cat  >  f1.txt
+
+Note: After writing data press 'CTRL + d' to save and close that file
+
+# Append data to existing file
+
+cat >> f1.txt
+
+# Print file data
+
+cat f1.txt
+
+# To delete a file 
+
+rm <filename>
+
+# To delete non-empty directories
+
+rm -r <dirname>
+
+Note: '-r' represents recursive
+
+
+# Rename files & directories (We can move from one directory to another directory
+
+mv <present-name> <new-name>
+
+mv <source-dir>  <target-dir>
+
+
+# copy data from one file to another file
+
+cat f1.txt > f2.txt
+
+# copy two files data into single file
+
+cat f1.txt f2.txt f3.txt > ashokit.txt
+
+# copy file
+
+cp f1.txt f2.txt
+
+

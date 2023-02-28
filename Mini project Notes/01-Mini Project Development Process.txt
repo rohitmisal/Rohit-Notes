@@ -1,0 +1,142 @@
+============
+Mini Projects
+============
+
+Technologies : Spring Boot, REST API, Data JPA, Swagger, PostMan & Angular
+
+
+==== For every mini project we have to follow below steps ====
+
+1) Read the FDD and understand the requirement
+
+2) Note down the questions on requirment (Query Log)
+
+3) Design Database Tables
+
+4) Design Classes & Method Signature
+
+5) Backend Coding
+
+6) Backend Testing
+
+7) Backend Deployment using docker & k8s
+
+=================================================
+
+-> First you guys need to analyze the requirement & design db  & design classes
+
+-> I will do my analysis in class and i will show my design then compare your design and my design
+	 (you will understand your mistakes)
+
+-> I will do live coding in the class and you guys should complete that coding on your own after the class is completed
+
+-> you need to submit your code for these mini projects as git repo urls
+
+====================================
+Main intension of developing Mini Projects
+====================================
+
+1) Your analysis skills should improve
+
+2) Your coding skills should improve
+
+3) To understand Realtime Best Practises as a developer
+
+4) To learn how to develop and deploy the real world projects
+
+5) Practise all the tools in the projects
+
+
+
+=============
+01-Mini Project
+=============
+
+1)  Contact.java  ( Entity & Binding ) (C)
+		
+			Integer contactId;
+			String contactName;
+			String contactEmail;
+			Long contactNum;
+
+2) ContactRepository.java  ( extends from JpaRepository ) (I)
+
+3) ContactService.java (I)
+
+			public String saveContact ( Contact contact ) ;
+
+			public List<Contact> getAllContacts ( ) ;
+
+			public Contact getContactById ( Integer contactId );
+
+			public String updateContact ( Contact contact );
+	
+			public String deleteContactById ( Integer contactId );
+
+			
+
+
+===============================
+Steps to develop First Mini Project
+===============================
+
+1) Create Spring Boot Application with below dependencies
+
+		a) web-starter
+		b) data-jpa-starter
+		c) lombok
+		d) devtools
+		e) h2
+
+2) Create Entity class & repository interface
+
+3) Create Service interface with implementation
+
+4) Create Rest Controller with required methods
+
+5) Configure Data source properties in application.yml file
+
+spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.username=sa
+spring.datasource.password=sa
+spring.datasource.driver-class-name=org.h2.Driver
+
+6) Run the application and test it 
+
+Note: We can access h2 database using below URL
+
+		DB URL : http://localhost:8080/h2-console/
+
+
+7) Download and install POSTMAN app to test Backend API
+
+	URL : https://www.postman.com/downloads/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+
+
+

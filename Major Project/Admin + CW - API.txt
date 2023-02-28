@@ -1,0 +1,81 @@
+=============
+Admin Module
+=============
+
+1) Case Worker Accounts Management
+
+			1.1 ) Create Account
+
+			1.2 ) View Accounts
+
+			1.3 ) Activate / De-Activate Account
+
+			1.4) Delete Account
+
+Note: When Case Worker account is created, case worker should recieve an email with temporary password in email and a link to unlock account by changing password.
+
+Note:  Case Workers whose accounts are unlocked only those case workers can login into our application.
+
+2) Plans Management
+
+			2.1 ) Create Plan
+
+			2.2 ) View Plans
+
+			2.3) Activate / De-Activate Plan
+
+			2.4) Delete Plan
+
+Note:  Only Active Plans should display in 'DC - Plan Selection' screen
+
+
+=========
+CW API
+========
+
+=> This api is responsible to handle below functionalities
+
+			1) Login Check
+
+			2) Recover Password
+
+			3) Dashboard display (no.of plans , approved citizens count, denied citizens count)
+
+			4) Edit Profile
+
+
+================================Below APIs should be completed===============================
+
+1) Admin API
+
+2) CW API
+
+3) AR API
+
+4) DC API
+
+5) ED API
+
+6) CO API
+
+7) Reports API
+
+================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,150 @@
+
+#########
+chown
+########
+
+-> 'chown' command is used to change file ownership
+
+-> We can see owner of the file using 'ls -l' command
+
+# changing owner of a file
+
+$ sudo chown <uname> <filename>
+
+-> We can change file owner using userID also
+
+$ sudo chown <UID> <filename>
+
+Note: We can get UID fo username using 'id uname' command
+
+$ id ramesh
+
+# change group of a file
+$ sudo chown :groupName <fileName>
+
+
+
+####################################
+Working with locate and find commands
+####################################
+
+-> find and locate commands are used to search files in Linux Machine
+
+# search files which contains apache
+$ locate apache
+
+# search files and display count which contains apache
+$ locate -c apache
+
+# print all .txt files
+$ locate *.txt
+
+# print the count of all .txt files
+$ locate -c *.txt
+
+Note: In Linux, all the files and directories locations will be stored in local db i.e locate db. When we execute locate command it will search in locate db (it will not search in actual file system). 
+
+
+-> find command will search for the files and directories in actual linux file system
+
+-> find command providing advanced searching techniques
+
+# find files under home directory
+
+$ find /home -name f1.txt
+
+# display only empty files
+$ sudo find /home -type f -empty
+
+# display only empty directories
+$ sudo find /home -type d -empty
+
+Note: find command will search in entire linux file system
+
+
+Note: To get documentation of any command we can use 'man' command
+
+
+#######################
+
+$ man find
+
+$ man locate
+
+$ man ping
+
+#######################
+
+# ifconfig  : It is used to print ip address of our machine
+
+$ ifconfig
+
+# wget   : It is used to download a file based on URL
+
+$ wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.65/bin/apache-tomcat-9.0.65.tar.gz
+
+# curl  : It is used to send HTTP request to URL
+
+$ curl https://ashokit-sb-rest-api.herokuapp.com/
+
+# ping : It is used to check network connectivity
+
+	$ ping www.google.com
+
+
+
+###########################################
+How to deploy  website in Linux Machine
+###########################################
+
+-> To run web applications we need webserver
+
+Note : httpd we can use as a webserver (It is apache webserver)
+
+$ sudo yum update
+
+$ sudo yum install httpd
+
+$ sudo service httpd start
+
+Note: Enable HTTP Protocol with 80 port in Security group (inbound rules) of our EC2 instance.
+
+-> Ater enabling 80 port in security group we can access our website using EC2 instance public ip.
+
+-> To change web page content we can use below commands
+
+$ cd /var/www/html
+
+$ sudo vi index.html  (write the content in index.html file and save it)
+
+-> Now access EC2 instance public ip in browser
+
+
+
+#####################################
+How to install required softwares in Linux
+#####################################
+
+$ sudo yum install git
+$ git --version
+
+$ sudo yum install maven
+$ mvn -version
+
+$ sudo yum install java
+$ java -version
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
